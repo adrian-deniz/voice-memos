@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.btn-container {
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+
+ #audio-container {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+button {
+    background-color: transparent;
+    border-style: none;
+}
+
