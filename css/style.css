@@ -1,30 +1,114 @@
 body {
     margin: 0;
+    background: linear-gradient(#eee, #fff);
 }
 
-.container {
+.container-cover {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: red; */
+    background: linear-gradient(#fff, #fff);
+    /* background: linear-gradient(#e66465, #9198e5); */
+    /* background: linear-gradient(#3f87a6, #f69d3c); */
+    
 }
 
-.btn-container {
-    /* background-color: green; */
+#audio-recorder-btn-container {
+    background-color: #3c3c3c;
+    /* background: linear-gradient(#eee, #fff); */
+    box-shadow: 0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0, 0, 0, 1);
     display: flex;
     justify-content: center;
+}
+
+ #audio-player-section {
+    display: grid;
+    overflow: auto;
+    grid-template-columns: repeat(auto-fill, 354px);
+    justify-content: center;
+    overflow: hidden;
+} 
+
+
+#audio-recorder-btn-container button {
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    background-image: url(../assets/stop-black-18dp.svg);
+    margin: 20px;
+}
+
+#audio-recorder-btn-container button:focus {
+    outline: none;
+  }
+
+  
+
+  #audio-recorder-section .record-button {
+    background-image: url(../assets/radio_button_checked-black-18dp.svg);
+    width: 80px;
+    height: 80px; 
+ }
+
+#audio-recorder-section .stop-button {
+    background-image: url(../assets/stop-black-18dp.svg);
+    width: 80px;
     height: 80px;
 }
 
- #audio-container {
-    overflow: auto;
+#audio-player-container {
+    /* background-image: url(../assets/audio-file.svg); */
+    background-color: #fff;
+    background: linear-gradient(to right, #fff 30%, #3c3c3c 0%);
+    
+    width: 314px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    flex-wrap: wrap;
-} 
-
-button {
-    background-color: transparent;
-    border-style: none;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+    border-style: solid;
+    border-color: #3c3c3c;
+    border-width: 2px;
 }
+
+#audio-player-container button {
+    outline: none;
+  }
+
+.play-button {
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    background-image: url(../assets/play_circle_outline-24px.svg);
+    /* margin: 20px; */
+}
+
+.pause-button {
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    background-image: url(../assets/pause_circle_outline-24px.svg);
+    /* margin: 20px; */
+    background-position: center;
+    justify-content: center;
+}
+
+
+ 
+
 
