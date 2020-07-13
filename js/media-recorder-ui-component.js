@@ -5,10 +5,6 @@ class Recorder {
       this.audioPlayerSection = document.getElementById(audioPlayerSection)
       this.order = 0;
       this.playList = [];
-      this.constraints = window.constraints = {
-        audio: true,
-        video: true
-      };
     }
 
     audioRecorderBtn() {
@@ -28,7 +24,7 @@ class Recorder {
     }
         
     engine() {
-      navigator.mediaDevices.getUserMedia(this.constraints) //Ask user for access to microphone
+      navigator.mediaDevices.getUserMedia({audio:true}) //Ask user for access to microphone
     .then(function(stream) {
       this.mediaRecorder = new MediaRecorder(stream); //New MediaRecorder object created.
       
@@ -59,7 +55,7 @@ class Recorder {
           
 
           this.audio = document.createElement("AUDIO");
-          this.audioPlayerContainer.appendChild(this.audio).setAttribute("controls", "");
+          this.audioPlayerContainer.appendChild(this.audio);
           this.blob = new Blob(this.chunks, { 'type' : 'audio/mp3; codecs=opus' }); //New blob object is created. Takes two parameters, an array and data type
           this.chunks = [];
           this.audioURL = URL.createObjectURL(this.blob); //URL.createObjectURL() takes blob as parameter and creates a url to reference data., which is the audio recording
