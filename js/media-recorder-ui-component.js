@@ -5,6 +5,10 @@ class Recorder {
       this.audioPlayerSection = document.getElementById(audioPlayerSection)
       this.order = 0;
       this.playList = [];
+      this.constraints = window.constraints = {
+        audio: true,
+        video: true
+      };
     }
 
     audioRecorderBtn() {
@@ -24,7 +28,7 @@ class Recorder {
     }
         
     engine() {
-      navigator.mediaDevices.getUserMedia({audio:true}) //Ask user for access to microphone
+      navigator.mediaDevices.getUserMedia(this.constraints) //Ask user for access to microphone
     .then(function(stream) {
       this.mediaRecorder = new MediaRecorder(stream); //New MediaRecorder object created.
       
