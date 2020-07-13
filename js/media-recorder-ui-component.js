@@ -55,7 +55,7 @@ class Recorder {
           
 
           this.audio = document.createElement("AUDIO");
-          this.audioPlayerContainer.appendChild(this.audio);//.setAttribute("controls", "");
+          this.audioPlayerContainer.appendChild(this.audio).setAttribute("controls", "");
           this.blob = new Blob(this.chunks, { 'type' : 'audio/mp3; codecs=opus' }); //New blob object is created. Takes two parameters, an array and data type
           this.chunks = [];
           this.audioURL = URL.createObjectURL(this.blob); //URL.createObjectURL() takes blob as parameter and creates a url to reference data., which is the audio recording
