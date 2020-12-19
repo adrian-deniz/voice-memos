@@ -27,7 +27,6 @@ body {
     overflow: auto;
     grid-template-columns: repeat(auto-fill, 354px);
     justify-content: center;
-    overflow: hidden;
 } 
 
 
