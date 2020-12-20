@@ -18,10 +18,7 @@ class Recorder {
       this.audioRecorderBtn = document.createElement("BUTTON");
       this.audioRecorderBtn.setAttribute('class', 'record-button');
       this.audioRecorderBtn.addEventListener('click', function(e) {
-        if (e.target.className === 'record-button') {
-            e.target.setAttribute('class', 'stop-button'); 
-            e.target.setAttribute('class', 'record-button');
-        }  
+        (e.target.className === 'record-button') ? e.target.setAttribute('class', 'stop-button') : e.target.setAttribute('class', 'record-button');
       }, false);
       this.audioRecorderBtnContainer.appendChild(this.audioRecorderBtn);
     }
